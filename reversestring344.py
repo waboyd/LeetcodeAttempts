@@ -12,8 +12,9 @@ class Solution(object):
             return None
         if s == "":
             return ""
-        s_reverse = ""
-        s_size = len(s)
-        for index in range(len(s)):
-            s_reverse += s[s_size-index-1]
+        max_index = len(s) - 1
+        # for index in range(len(s)):
+        #     s_reverse += s[s_size-index-1]
+        s_reverse =\
+            "".join([s[max_index-index] for index in range(max_index + 1)])
         return s_reverse
